@@ -26,5 +26,9 @@ Find a maze algorithm soruce made using the Jaguar Board that uses Atmega128.
     Headers functions related to the find a maze algorithm
 <br>
 <br>
+#주행 영상(Video)
+  http://goo.gl/WLZzsj
+<br>
+<br>
 Made by 프매씨(pemassi, ruddbs5301@naver.com, korea)<br>
 Homepage : http://vmao.tistory.com
