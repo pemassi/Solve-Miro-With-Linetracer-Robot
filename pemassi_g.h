@@ -2,50 +2,50 @@
 /
 / Made by pemassi, Modify - 2015.07.13
 /
-/ init_absh() - ABSH °ª Á¤·Ä ¹× ÃÊ±âÈ­
+/ init_absh() - ABSH ê°’ ì •ë ¬ ë° ì´ˆê¸°í™”
 /
-/ chg_absh(¼Óµµ) - ABSH º¯°æ
+/ chg_absh(ì†ë„) - ABSH ë³€ê²½
 /
-/ mline(Á¾·ù,¼Óµµ,ºê·¹ÀÌÅ©) - ±âº» ¶óÀÎÆ®·¹ÀÌ¼­
+/ mline(ì¢…ë¥˜,ì†ë„,ë¸Œë ˆì´í¬) - ê¸°ë³¸ ë¼ì¸íŠ¸ë ˆì´ì„œ
 /
-/ smline(Á¾·ù,¼Óµµ,ºê·¹ÀÌÅ©) - ±âº» ¶óÀÎÆ®·¹ÀÌ¼­ + ±³Â÷·Î ¾Õ ±îÁö¸¸
+/ smline(ì¢…ë¥˜,ì†ë„,ë¸Œë ˆì´í¬) - ê¸°ë³¸ ë¼ì¸íŠ¸ë ˆì´ì„œ + êµì°¨ë¡œ ì• ê¹Œì§€ë§Œ
 /
-/ uline(Á¾·ù,ÃÖ¼Ò¼Óµµ,ÃÖ´ë¼Óµµ,ºê·¹ÀÌÅ©) - °¡¼Ó ¶óÀÎÆ®·¹ÀÌ¼­
+/ uline(ì¢…ë¥˜,ìµœì†Œì†ë„,ìµœëŒ€ì†ë„,ë¸Œë ˆì´í¬) - ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì„œ
 /
-/ dline(Á¾·ù,ÃÖ¼Ò¼Óµµ,ÃÖ´ë¼Óµµ,ºê·¹ÀÌÅ©) - °¨¼Ó ¶óÀÎÆ®·¹ÀÌ¼­
+/ dline(ì¢…ë¥˜,ìµœì†Œì†ë„,ìµœëŒ€ì†ë„,ë¸Œë ˆì´í¬) - ê°ì† ë¼ì¸íŠ¸ë ˆì´ì„œ
 /
-/ suline(Á¾·ù,ÃÖ¼Ò¼Óµµ,ÃÖ´ë¼Óµµ,ºê·¹ÀÌÅ©) - °¡¼Ó ¶óÀÎÆ®·¹ÀÌ¼­ + ±³Â÷·Î ¾Õ ±îÁö¸¸
+/ suline(ì¢…ë¥˜,ìµœì†Œì†ë„,ìµœëŒ€ì†ë„,ë¸Œë ˆì´í¬) - ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì„œ + êµì°¨ë¡œ ì• ê¹Œì§€ë§Œ
 /
-/ sdline(Á¾·ù,ÃÖ¼Ò¼Óµµ,ÃÖ´ë¼Óµµ,ºê·¹ÀÌÅ©) - °¨¼Ó ¶óÀÎÆ®·¹ÀÌ¼­ + ±³Â÷·Î ¾Õ ±îÁö¸¸
+/ sdline(ì¢…ë¥˜,ìµœì†Œì†ë„,ìµœëŒ€ì†ë„,ë¸Œë ˆì´í¬) - ê°ì† ë¼ì¸íŠ¸ë ˆì´ì„œ + êµì°¨ë¡œ ì• ê¹Œì§€ë§Œ
 /
-/ culine(Á¾·ù,ÃÖ¼Ò¼Óµµ,ÃÖ´ë¼Óµµ,Å©·Î½ººê·¹ÀÌÅ©,ºê·¹ÀÌÅ©) - °¡¼Ó ¶óÀÎÆ®·¹ÀÌ¼­ + Å©·Î½ººê·¹ÀÌÅ©
+/ culine(ì¢…ë¥˜,ìµœì†Œì†ë„,ìµœëŒ€ì†ë„,í¬ë¡œìŠ¤ë¸Œë ˆì´í¬,ë¸Œë ˆì´í¬) - ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì„œ + í¬ë¡œìŠ¤ë¸Œë ˆì´í¬
 /
-/ cdline(Á¾·ù,ÃÖ¼Ò¼Óµµ,ÃÖ´ë¼Óµµ,Å©·Î½ººê·¹ÀÌÅ©,ºê·¹ÀÌÅ©) - °¨¼Ó ¶óÀÎÆ®·¹ÀÌ¼­ + Å©·Î½ººê·¹ÀÌÅ©
+/ cdline(ì¢…ë¥˜,ìµœì†Œì†ë„,ìµœëŒ€ì†ë„,í¬ë¡œìŠ¤ë¸Œë ˆì´í¬,ë¸Œë ˆì´í¬) - ê°ì† ë¼ì¸íŠ¸ë ˆì´ì„œ + í¬ë¡œìŠ¤ë¸Œë ˆì´í¬
 /
-/ cdline2(Á¾·ù,ÃÖ¼Ò¼Óµµ,ÃÖ´ë¼Óµµ,µô·¹ÀÌ,ºê·¹ÀÌÅ©) - °¨¼Ó ¶óÀÎÆ®·¹ÀÌ¼­ + µô·¹ÀÌ ¸¸Å­ ÃÖ´ë¼Óµµ·Î °¡´Ù°¡ °¨¼Ó
+/ cdline2(ì¢…ë¥˜,ìµœì†Œì†ë„,ìµœëŒ€ì†ë„,ë”œë ˆì´,ë¸Œë ˆì´í¬) - ê°ì† ë¼ì¸íŠ¸ë ˆì´ì„œ + ë”œë ˆì´ ë§Œí¼ ìµœëŒ€ì†ë„ë¡œ ê°€ë‹¤ê°€ ê°ì†
 /
-/ chg_udt(µô·¹ÀÌ) - °¡¼Ó µô·¹ÀÌ º¯°æ
+/ chg_udt(ë”œë ˆì´) - ê°€ì† ë”œë ˆì´ ë³€ê²½
 /
-/ chg_ddt(µô·¹ÀÌ) - °¨¼Ó µô·¹ÀÌ º¯°æ
+/ chg_ddt(ë”œë ˆì´) - ê°ì† ë”œë ˆì´ ë³€ê²½
 /
-/ chg_utt(µô·¹ÀÌ) / chg_dtt(µô·¹ÀÌ) - ÅÏ °¡°¨¼Ó µô·¹ÀÌ º¯°æ
+/ chg_utt(ë”œë ˆì´) / chg_dtt(ë”œë ˆì´) - í„´ ê°€ê°ì† ë”œë ˆì´ ë³€ê²½
 /
-/ udlt, udrt(ÃÖ¼Ò¼Óµµ, ÃÖ´ë¼Óµµ, ºê·¹ÀÌÅ©) - °¡°¨¼Ó ÅÏ(3¹ø¼¾¼­°¡ °ËÀº»ö º¼ °æ¿ì °¨¼Ó ½ÃÀÛ)
+/ udlt, udrt(ìµœì†Œì†ë„, ìµœëŒ€ì†ë„, ë¸Œë ˆì´í¬) - ê°€ê°ì† í„´(3ë²ˆì„¼ì„œê°€ ê²€ì€ìƒ‰ ë³¼ ê²½ìš° ê°ì† ì‹œì‘)
 /
-/ udline(±³Â÷·Î, ÃÖ¼Ò¼Óµµ, ÃÖ´ë¼Óµµ, ¶óÀÎµô·¹ÀÌ, ºê·¹ÀÌÅ©) - °¡¼Ó ÈÄ ¶óÀÎ µô·¹ÀÌ ¸¸Å­ ÃÖ´ë ¼Óµµ·Î ÁÖÇà ÈÄ °¨¼Ó
+/ udline(êµì°¨ë¡œ, ìµœì†Œì†ë„, ìµœëŒ€ì†ë„, ë¼ì¸ë”œë ˆì´, ë¸Œë ˆì´í¬) - ê°€ì† í›„ ë¼ì¸ ë”œë ˆì´ ë§Œí¼ ìµœëŒ€ ì†ë„ë¡œ ì£¼í–‰ í›„ ê°ì†
 /
 /
 ***********************************************************************************/
-/* ÆĞÄ¡³ëÆ®
-/ 2014.11.21 - init_absh, chg_absh, uline, dline, uuline, ddline, aline, autoline ¸í·É¾î »ı¼º
+/* íŒ¨ì¹˜ë…¸íŠ¸
+/ 2014.11.21 - init_absh, chg_absh, uline, dline, uuline, ddline, aline, autoline ëª…ë ¹ì–´ ìƒì„±
 /
-/ 2014.11.26 - culine, cdline, cdline2, suline, sdline »ı¼º
-/              °¡¼Ó, °¨¼Ó Áß ¶óÀÎÀ» º¼ °æ¿ì °¡°¨¼ÓÀ» Áß´ÜÇÏ´Â Á¶°Ç ¼ø¼­ º¯°æ (if(count==1) break;)
-/              ¶óÀÎ Çª½¬ ¶óÀÎÆ®·¹ÀÌ¼­ Á¶°Ç º¯°æ(4¹ø ¼¾¼­ -> 3,4,5¹ø ¼¾¼­)
+/ 2014.11.26 - culine, cdline, cdline2, suline, sdline ìƒì„±
+/              ê°€ì†, ê°ì† ì¤‘ ë¼ì¸ì„ ë³¼ ê²½ìš° ê°€ê°ì†ì„ ì¤‘ë‹¨í•˜ëŠ” ì¡°ê±´ ìˆœì„œ ë³€ê²½ (if(count==1) break;)
+/              ë¼ì¸ í‘¸ì‰¬ ë¼ì¸íŠ¸ë ˆì´ì„œ ì¡°ê±´ ë³€ê²½(4ë²ˆ ì„¼ì„œ -> 3,4,5ë²ˆ ì„¼ì„œ)
 /
-/ 2014.11.29 - chg_udt, chg_ddt, chg_dtt, chg_utt, udlt, udrt, mline, smline, udline »ı¼º
+/ 2014.11.29 - chg_udt, chg_ddt, chg_dtt, chg_utt, udlt, udrt, mline, smline, udline ìƒì„±
 /
-/ 2015.07.13 - ¸Ş¸ğ¸® ¿ë·® ÃÖ¼ÒÈ­, ¸í·É¾î ÃÖ¼ÒÈ­
+/ 2015.07.13 - ë©”ëª¨ë¦¬ ìš©ëŸ‰ ìµœì†Œí™”, ëª…ë ¹ì–´ ìµœì†Œí™”
 /
 /
 /
@@ -55,7 +55,7 @@
 */
 
 ///////////////////////////////////////////////////////////////////
-// ¶óÀÎÆ®·¹ÀÌ¼­ °ü·Ã ¼±¾ğ
+// ë¼ì¸íŠ¸ë ˆì´ì„œ ê´€ë ¨ ì„ ì–¸
 
 
 char absh_1[21];
@@ -64,7 +64,7 @@ char absh_3[21];
 char absh_4[21];
 char absh_5[21];
 
-// ABS ÃÖ´ëÄ¡
+// ABS ìµœëŒ€ì¹˜
 #define MAX_ABSH1 20
 #define MAX_ABSH2 18
 #define MAX_ABSH3 12
@@ -72,30 +72,30 @@ char absh_5[21];
 #define MAX_ABSH5 5
 
 
-// ABS ÃÖ¼ÒÄ¡
+// ABS ìµœì†Œì¹˜
 #define MIN_ABSH1 5
 #define MIN_ABSH2 3
 #define MIN_ABSH3 0
 #define MIN_ABSH4 0
 #define MIN_ABSH5 0
 
-// ABS °¨¼ÓÄ¡
+// ABS ê°ì†ì¹˜
 #define DC_ABSH1 1
 #define DC_ABSH2 1
 #define DC_ABSH3 1
 #define DC_ABSH4 1
 #define DC_ABSH5 1
 
-// °¡,°¨¼Ó °ü·Ã µô·¹ÀÌ
+// ê°€,ê°ì† ê´€ë ¨ ë”œë ˆì´
 char UP_DELAY_TIME = 10;
 char DOWN_DELAY_TIME = 10;
 char UP_TRUN_TIME = 10;
 char DOWN_TRUN_TIME = 10;
 
-// ¶óÀÎ ¹«½Ã µô·¹ÀÌ
+// ë¼ì¸ ë¬´ì‹œ ë”œë ˆì´
 char IGNORE_DELAY_TIME = 100;
 
-// ÇöÀç ¼Óµµ & °¡°¨¼Ó ÇÃ·¡±×
+// í˜„ì¬ ì†ë„ & ê°€ê°ì† í”Œë˜ê·¸
 #define UPDOWN_FLAG_NORMAL 0
 #define UPDOWN_FLAG_FAST 1
 #define UPDOWN_FLAG_SLOW 2
@@ -110,39 +110,39 @@ char IGNORE_DELAY_TIME = 100;
 //#define CU_DIR_B 1
 
 char now_speed = 0;
-char UPDOWN_FLAG = UPDOWN_FLAG_START; // 0 - ±âº» / 1 - °¡¼Ó / 2 - °¨¼Ó / 3 - ÅÏ / 4 - ½ÃÀÛ
-//char CU_DIR = CU_DIR_F; // ¹æÇâ 0 - ¾Õ / 1 - µÚ
+char UPDOWN_FLAG = UPDOWN_FLAG_START; // 0 - ê¸°ë³¸ / 1 - ê°€ì† / 2 - ê°ì† / 3 - í„´ / 4 - ì‹œì‘
+//char CU_DIR = CU_DIR_F; // ë°©í–¥ 0 - ì• / 1 - ë’¤
 
 //#define dff chg_dir(FF);
 //#define dbb chg_dir(BB);
 
 //////////////////////////////////////////////////////////////////
-void init_absh();                                                                               //absh ¼¼ÆÃ ÃÊ±âÈ­
-void chg_absh(int sp);                                                                          //absh º¯°æ
-void dline(char kind, char s_speed, char speed,char breaks);                                    //°¨¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì
-void uline(char kind, char s_speed, char speed, char breaks);                                   //°¡¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì
-void culine(char kind, char s_speed, char speed, char crossbreaks, char breaks);                //Å©·Î½ººê·¹ÀÌÅ© °¡¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì
-void cdline(char kind, char s_speed, char speed, char crossbreaks, char breaks);                //Å©·Î½ººê·¹ÀÌÅ© °¨¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì
-void cdline2(char kind, char s_speed, char speed, char crossbreaks, char delays, char breaks);  //Å©·Î½ººê·¹ÀÌÅ© & °í¼Ó + °¨¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì
-void suline(char kind, char s_speed, char speed, char breaks);                                  //°¡¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì(¼±º¸°í ¸ØÃã)
-void sdline(char kind, char s_speed, char speed,char breaks);                                   //°¨¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì(¼±º¸°í ¸ØÃã)
-void chg_dtt(char delays);                                                                      //°¨¼Ó ÅÏ µô·¹ÀÌ Á¶Àı
-void chg_udt(char delays);                                                                      //°¡¼Ó ÅÏ µô·¹ÀÌ Á¶Àı
-void chg_utt(char delays);                                                                      //°¡¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì µô·¹ÀÌ Á¶Àı
-void chg_dtt(char delays);                                                                      //°¨¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì µô·¹ÀÌ Á¶Àı
-void mline(char kind, char speed, char breaks);                                                 //ÀÏ¹İ ¶óÀÎÆ®·¹ÀÌ½Ì
-void smline(char kind, char speed, char breaks);                                                //ÀÏ¹İ ¶óÀÎÆ®·¹ÀÌ½Ì(¼±º¸°í ¸ØÃã)
-void udlt(char s_speed, char f_speed, char breaks);                                             //°¡°¨¼Ó ¿ŞÂÊ ÅÏ
-void udrt(char s_speed, char f_speed, char breaks);                                             //°¡°¨¼Ó ¿À¸¥ÂÊ ÅÏ
-void linemotor(char delay,char speed);                                                          //¶óÀÎ&¸ğÅÍ(¶óÀÎÀÌ ÀÖÀ» °æ¿ì ¶óÀÎÀ» Å½)
-//void chg_dir(char dirc);                                                                      //µğ·º¼Ç º¯°æ
-int check_front_sensor_or(char kind);                                                           //¾Õ ¼¾¼­ °ª ¹İÈ¯(or Çü)
-int check_front_sensor(char kind);                                                              //¾Õ ¼¾¼­ °ª ¹İÈ¯(and Çü)
-void Flinetrcaer(int speed);                                                                     //¸ğÅÍ¶óÀÎÆ®·¹ÀÌ½Ì(2,3,4¹øÀÌ º¼°æ¿ì ¶óÀÎÆ®·¹ÀÌ½Ì ÀÌ¿Ü¿¡ wheel)
-int core_dline(char kind, char s_speed, char speed);                                            //°¨¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì ÄÚ¾î
-int core_uline(char kind, char s_speed, char speed);                                            //°¡¼Ó ¶óÀÎÆ®·¹ÀÌ½Ì ÄÚ¾î
-void absh_wheel(int speed);                                                                     //absh Àû¿ëµÈ wheel
-void lostuline(char kind, char s_speed, char f_speed, char losttime, char breaks);				//°¡¼Ó ·Î½ºÆ® ¶óÀÎÆ®·¹ÀÌ½Ì
+void init_absh();                                                                               //absh ì„¸íŒ… ì´ˆê¸°í™”
+void chg_absh(int sp);                                                                          //absh ë³€ê²½
+void dline(char kind, char s_speed, char speed,char breaks);                                    //ê°ì† ë¼ì¸íŠ¸ë ˆì´ì‹±
+void uline(char kind, char s_speed, char speed, char breaks);                                   //ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì‹±
+void culine(char kind, char s_speed, char speed, char crossbreaks, char breaks);                //í¬ë¡œìŠ¤ë¸Œë ˆì´í¬ ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì‹±
+void cdline(char kind, char s_speed, char speed, char crossbreaks, char breaks);                //í¬ë¡œìŠ¤ë¸Œë ˆì´í¬ ê°ì† ë¼ì¸íŠ¸ë ˆì´ì‹±
+void cdline2(char kind, char s_speed, char speed, char crossbreaks, char delays, char breaks);  //í¬ë¡œìŠ¤ë¸Œë ˆì´í¬ & ê³ ì† + ê°ì† ë¼ì¸íŠ¸ë ˆì´ì‹±
+void suline(char kind, char s_speed, char speed, char breaks);                                  //ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì‹±(ì„ ë³´ê³  ë©ˆì¶¤)
+void sdline(char kind, char s_speed, char speed,char breaks);                                   //ê°ì† ë¼ì¸íŠ¸ë ˆì´ì‹±(ì„ ë³´ê³  ë©ˆì¶¤)
+void chg_dtt(char delays);                                                                      //ê°ì† í„´ ë”œë ˆì´ ì¡°ì ˆ
+void chg_udt(char delays);                                                                      //ê°€ì† í„´ ë”œë ˆì´ ì¡°ì ˆ
+void chg_utt(char delays);                                                                      //ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì‹± ë”œë ˆì´ ì¡°ì ˆ
+void chg_dtt(char delays);                                                                      //ê°ì† ë¼ì¸íŠ¸ë ˆì´ì‹± ë”œë ˆì´ ì¡°ì ˆ
+void mline(char kind, char speed, char breaks);                                                 //ì¼ë°˜ ë¼ì¸íŠ¸ë ˆì´ì‹±
+void smline(char kind, char speed, char breaks);                                                //ì¼ë°˜ ë¼ì¸íŠ¸ë ˆì´ì‹±(ì„ ë³´ê³  ë©ˆì¶¤)
+void udlt(char s_speed, char f_speed, char breaks);                                             //ê°€ê°ì† ì™¼ìª½ í„´
+void udrt(char s_speed, char f_speed, char breaks);                                             //ê°€ê°ì† ì˜¤ë¥¸ìª½ í„´
+void linemotor(char delay,char speed);                                                          //ë¼ì¸&ëª¨í„°(ë¼ì¸ì´ ìˆì„ ê²½ìš° ë¼ì¸ì„ íƒ)
+//void chg_dir(char dirc);                                                                      //ë””ë ‰ì…˜ ë³€ê²½
+int check_front_sensor_or(char kind);                                                           //ì• ì„¼ì„œ ê°’ ë°˜í™˜(or í˜•)
+int check_front_sensor(char kind);                                                              //ì• ì„¼ì„œ ê°’ ë°˜í™˜(and í˜•)
+void Flinetrcaer(int speed);                                                                     //ëª¨í„°ë¼ì¸íŠ¸ë ˆì´ì‹±(2,3,4ë²ˆì´ ë³¼ê²½ìš° ë¼ì¸íŠ¸ë ˆì´ì‹± ì´ì™¸ì— wheel)
+int core_dline(char kind, char s_speed, char speed);                                            //ê°ì† ë¼ì¸íŠ¸ë ˆì´ì‹± ì½”ì–´
+int core_uline(char kind, char s_speed, char speed);                                            //ê°€ì† ë¼ì¸íŠ¸ë ˆì´ì‹± ì½”ì–´
+void absh_wheel(int speed);                                                                     //absh ì ìš©ëœ wheel
+void lostuline(char kind, char s_speed, char f_speed, char losttime, char breaks);				//ê°€ì† ë¡œìŠ¤íŠ¸ ë¼ì¸íŠ¸ë ˆì´ì‹±
 
 /*
 void chg_dir(char dirc)
@@ -225,18 +225,18 @@ void chg_absh(int sp)
 void lostuline(char kind, char s_speed, char f_speed, char losttime, char breaks)
 {
     char i=s_speed;
-    char count=0;       //Å©·Î½º ¸¸³² ¿©ºÎ ÇÃ·¡±×
+    char count=0;       //í¬ë¡œìŠ¤ ë§Œë‚¨ ì—¬ë¶€ í”Œë˜ê·¸
     char lost=0;
     
-    /* µå¶óÀÌ¹ö¸¦ º¯°æÇÏ¸ç 'UP_DELAY_TIME' µô·¹ÀÌ ¸¸Å­ ÃµÃµÈ÷ °¡¼ÓÇÑ´Ù */
+    /* ë“œë¼ì´ë²„ë¥¼ ë³€ê²½í•˜ë©° 'UP_DELAY_TIME' ë”œë ˆì´ ë§Œí¼ ì²œì²œíˆ ê°€ì†í•œë‹¤ */
     for(i=s_speed;i<=f_speed;i++)
     {
-        chg_absh(i);        //µå¶óÀÌ¹ö º¯°æ
-        itimer1=0;          //Å¸ÀÌ¸Ó ¸®¼Â
+        chg_absh(i);        //ë“œë¼ì´ë²„ ë³€ê²½
+        itimer1=0;          //íƒ€ì´ë¨¸ ë¦¬ì…‹
         
-        while(itimer1<=UP_DELAY_TIME) //Å¸ÀÌ¸Ó°¡ UP_DELAY_TIME º¸´Ù ÀÛÀ» µ¿¾È ¹İº¹
+        while(itimer1<=UP_DELAY_TIME) //íƒ€ì´ë¨¸ê°€ UP_DELAY_TIME ë³´ë‹¤ ì‘ì„ ë™ì•ˆ ë°˜ë³µ
         {
-            /* ÁÖÇà Áß Å©·Î½º¸¦ º» °æ¿ì */
+            /* ì£¼í–‰ ì¤‘ í¬ë¡œìŠ¤ë¥¼ ë³¸ ê²½ìš° */
             if(FW1&&FW2&&FW3&&FW4&&FW5&&FW6&&FW7)
             {
                 if(lost==0)
@@ -268,7 +268,7 @@ void lostuline(char kind, char s_speed, char f_speed, char losttime, char breaks
         if(count==1) break;
     }
     
-    if(count==0) //ÁÖÇà Áß ¶óÀÎÀ» ¸ø º» °æ¿ì °è¼Ó ¶óÀÎÆ®·¹ÀÌ¼­
+    if(count==0) //ì£¼í–‰ ì¤‘ ë¼ì¸ì„ ëª» ë³¸ ê²½ìš° ê³„ì† ë¼ì¸íŠ¸ë ˆì´ì„œ
     {
         while(!check_front_sensor(kind))
         {
@@ -279,7 +279,7 @@ void lostuline(char kind, char s_speed, char f_speed, char losttime, char breaks
         }
     }
     
-    while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+    while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
     {
         Flinetrcaer(i);
     }
@@ -301,12 +301,12 @@ int udline(char kind, char s_speed, char speed, char delays, char breaks)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=UP_DELAY_TIME) //UP_DELAY_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=UP_DELAY_TIME) //UP_DELAY_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(check_front_sensor(kind))
             {
                 count=1;
-                break; //°¡¼Ó Áß ¶óÀÎÀ» º¸¸é ÆÄ±«
+                break; //ê°€ì† ì¤‘ ë¼ì¸ì„ ë³´ë©´ íŒŒê´´
             }
             else linetracer(i);
         }
@@ -316,7 +316,7 @@ int udline(char kind, char s_speed, char speed, char delays, char breaks)
     
     if(count==1)
     {
-        while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+        while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
         {
             Flinetrcaer(i);
         }
@@ -335,7 +335,7 @@ int udline(char kind, char s_speed, char speed, char delays, char breaks)
     
     if(count==1)
     {
-        while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+        while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
         {
             Flinetrcaer(i);
         }
@@ -350,12 +350,12 @@ int udline(char kind, char s_speed, char speed, char delays, char breaks)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=DOWN_DELAY_TIME) //DOWN_DELAY_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=DOWN_DELAY_TIME) //DOWN_DELAY_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(check_front_sensor(kind))
             {
                 count=1;
-                break; //°¨¼Ó Áß ¶óÀÎÀ» º¸¸é ÆÄ±«
+                break; //ê°ì† ì¤‘ ë¼ì¸ì„ ë³´ë©´ íŒŒê´´
             }
             else linetracer(i);
         }
@@ -364,7 +364,7 @@ int udline(char kind, char s_speed, char speed, char delays, char breaks)
         
     }
     
-    if(count==0) //°¨¼Ó Áß ¶óÀÎÀ» ¸ø º» °æ¿ì °è¼Ó ¶óÀÎÆ®·¹ÀÌ¼­
+    if(count==0) //ê°ì† ì¤‘ ë¼ì¸ì„ ëª» ë³¸ ê²½ìš° ê³„ì† ë¼ì¸íŠ¸ë ˆì´ì„œ
     {
         while(!check_front_sensor(kind))
         {
@@ -372,7 +372,7 @@ int udline(char kind, char s_speed, char speed, char delays, char breaks)
         }
     }
     
-    while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+    while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
     {
         Flinetrcaer(i);
     }
@@ -394,7 +394,7 @@ void cdline2(char kind, char s_speed, char speed, char crossbreaks, char delays,
     if(count==0) cdline(kind,s_speed,speed,crossbreaks,breaks);
     else
     {
-        while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+        while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
         {
             Flinetrcaer(crossbreaks);
         }
@@ -407,7 +407,7 @@ void culine(char kind, char s_speed, char speed, char crossbreaks, char breaks)
 {
     int i = core_uline(kind,s_speed,speed);
     
-    while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+    while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
     {
         Flinetrcaer(crossbreaks);
     }
@@ -425,7 +425,7 @@ void cdline(char kind, char s_speed, char speed, char crossbreaks, char breaks)
 {
     int i = core_dline(kind,s_speed,speed);
     
-    while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+    while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
     {
         Flinetrcaer(crossbreaks);
     }
@@ -467,7 +467,7 @@ void dline(char kind, char s_speed, char speed, char breaks)
 {
     int i = core_dline(kind,s_speed,speed);
     
-    while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+    while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
     {
         Flinetrcaer(i);
     }
@@ -485,7 +485,7 @@ void uline(char kind, char s_speed, char speed, char breaks)
 
 	int i = core_uline(kind,s_speed,speed);
 	 
-    while(check_front_sensor_or(kind)) //¶óÀÎÀ» º» °æ¿ì ´ÙÀ½ ¶óÀÎÀ» À§ÇØ ³Ñ¾î°£´Ù.
+    while(check_front_sensor_or(kind)) //ë¼ì¸ì„ ë³¸ ê²½ìš° ë‹¤ìŒ ë¼ì¸ì„ ìœ„í•´ ë„˜ì–´ê°„ë‹¤.
     {
         Flinetrcaer(i);
     }
@@ -508,11 +508,11 @@ void mline(char kind, char speed, char breaks)
         line(lr1,speed,0);
         linemotor(breaks,speed);
     }
-    else if(now_speed<speed)//ÇöÀç ¼Óµµ°¡ ¿øÇÏ´Â ¼Óµµº¸´Ù ÀÛÀ» °æ¿ì °¡¼Ó
+    else if(now_speed<speed)//í˜„ì¬ ì†ë„ê°€ ì›í•˜ëŠ” ì†ë„ë³´ë‹¤ ì‘ì„ ê²½ìš° ê°€ì†
     {
         uline(kind,now_speed,speed,breaks);   
     }
-    else if(now_speed>speed)//ÇöÀç ¼Óµµ°¡ ¿øÇÏ´Â ¼Óµµº¸´Ù ÀÛÀ» °æ¿ì °¨¼Ó
+    else if(now_speed>speed)//í˜„ì¬ ì†ë„ê°€ ì›í•˜ëŠ” ì†ë„ë³´ë‹¤ ì‘ì„ ê²½ìš° ê°ì†
     {
         cdline(kind,speed,now_speed,10,breaks);
     }
@@ -545,13 +545,13 @@ void smline(char kind, char speed, char breaks)
         sline(temp,speed,0);
         linemotor(breaks,speed);
     }
-    else if(now_speed<speed)//ÇöÀç ¼Óµµ°¡ ¿øÇÏ´Â ¼Óµµº¸´Ù ÀÛÀ» °æ¿ì °¡¼Ó
+    else if(now_speed<speed)//í˜„ì¬ ì†ë„ê°€ ì›í•˜ëŠ” ì†ë„ë³´ë‹¤ ì‘ì„ ê²½ìš° ê°€ì†
     {
         
         suline(kind,now_speed,speed,breaks);
         
     }
-    else if(now_speed>speed)//ÇöÀç ¼Óµµ°¡ ¿øÇÏ´Â ¼Óµµº¸´Ù ÀÛÀ» °æ¿ì °¨¼Ó
+    else if(now_speed>speed)//í˜„ì¬ ì†ë„ê°€ ì›í•˜ëŠ” ì†ë„ë³´ë‹¤ ì‘ì„ ê²½ìš° ê°ì†
     {
         sdline(kind,speed,now_speed,breaks);
     }
@@ -570,7 +570,7 @@ void udlt(char s_speed, char f_speed, char breaks)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(FB1)
             {
@@ -591,7 +591,7 @@ void udlt(char s_speed, char f_speed, char breaks)
             chg_absh(i);
             itimer1=0;
             
-            while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+            while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
             {
                 if(FB2)
                 {
@@ -637,7 +637,7 @@ void udlt(char s_speed, char f_speed, char breaks)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=DOWN_TRUN_TIME) //UP_TRUN_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=DOWN_TRUN_TIME) //UP_TRUN_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(FB4)
             {
@@ -670,7 +670,7 @@ void udrt(char s_speed, char f_speed, char breaks)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(FB7)
             {
@@ -691,7 +691,7 @@ void udrt(char s_speed, char f_speed, char breaks)
             chg_absh(i);
             itimer1=0;
             
-            while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+            while(itimer1<=UP_TRUN_TIME) //UP_TRUN_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
             {
                 if(FB6)
                 {
@@ -737,7 +737,7 @@ void udrt(char s_speed, char f_speed, char breaks)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=DOWN_TRUN_TIME) //UP_TRUN_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=DOWN_TRUN_TIME) //UP_TRUN_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(FB4)
             {
@@ -793,10 +793,10 @@ void linemotor(char delays, char speed)
 
 void Flinetrcaer(int speed)
 {
-    if(FB3||FB4||FB5) linetracer(speed); //3,4,5¹ø ¼¾¼­°¡ ¶óÀÎÀ» º¸°í ÀÖÀ¸¸é Æ®·¹ÀÌ¼­
+    if(FB3||FB4||FB5) linetracer(speed); //3,4,5ë²ˆ ì„¼ì„œê°€ ë¼ì¸ì„ ë³´ê³  ìˆìœ¼ë©´ íŠ¸ë ˆì´ì„œ
     else
     {
-        //¾Èº¸°í ÀÖ´Ù¸é wheel·Î Çª½¬
+        //ì•ˆë³´ê³  ìˆë‹¤ë©´ wheelë¡œ í‘¸ì‰¬
         absh_wheel(speed);
     }
 }
@@ -903,31 +903,25 @@ int core_dline(char kind, char s_speed, char speed)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=DOWN_DELAY_TIME) //DOWN_DELAY_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=DOWN_DELAY_TIME) //DOWN_DELAY_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(check_front_sensor(kind))
             {
                 count=1;
-                break; //°¨¼Ó Áß ¶óÀÎÀ» º¸¸é ÆÄ±«
+                break; //ê°ì† ì¤‘ ë¼ì¸ì„ ë³´ë©´ íŒŒê´´
             }
             else linetracer(i);
-
-			servo5(now_speed*3);
-
         }
         
         if(count==1) break;
         
     }
     
-    if(count==0) //°¨¼Ó Áß ¶óÀÎÀ» ¸ø º» °æ¿ì °è¼Ó ¶óÀÎÆ®·¹ÀÌ¼­
+    if(count==0) //ê°ì† ì¤‘ ë¼ì¸ì„ ëª» ë³¸ ê²½ìš° ê³„ì† ë¼ì¸íŠ¸ë ˆì´ì„œ
     {
         while(!check_front_sensor(kind))
         {
             linetracer(i);
-
-			servo5(now_speed*3);
-
         }
     }
 
@@ -944,30 +938,24 @@ int core_uline(char kind, char s_speed, char speed)
         chg_absh(i);
         itimer1=0;
         
-        while(itimer1<=UP_DELAY_TIME) //UP_DELAY_TIME ¸¸Å­ ÃµÃµÈ÷ °¡¼Ó
+        while(itimer1<=UP_DELAY_TIME) //UP_DELAY_TIME ë§Œí¼ ì²œì²œíˆ ê°€ì†
         {
             if(check_front_sensor(kind))
             {
                 count=1;
-                break; //°¡¼Ó Áß ¶óÀÎÀ» º¸¸é ÆÄ±«
+                break; //ê°€ì† ì¤‘ ë¼ì¸ì„ ë³´ë©´ íŒŒê´´
             }
             else linetracer(20);
-
-			servo5(now_speed*3);
-
         }
         
         if(count==1) break;
     }
     
-    if(count==0) //°¡¼Ó Áß ¶óÀÎÀ» ¸ø º» °æ¿ì °è¼Ó ¶óÀÎÆ®·¹ÀÌ¼­
+    if(count==0) //ê°€ì† ì¤‘ ë¼ì¸ì„ ëª» ë³¸ ê²½ìš° ê³„ì† ë¼ì¸íŠ¸ë ˆì´ì„œ
     {
         while(!check_front_sensor(kind))
         {
             linetracer(20);
-
-			servo5(now_speed*3);
-
         }
     }
 
