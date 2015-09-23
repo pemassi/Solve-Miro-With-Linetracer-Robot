@@ -5,12 +5,12 @@ Atmega128을 사용하는 Jaguar 보드를 사용하여 만든 미로찾기 알�
 Find a maze algorithm soruce made using the Jaguar Board that uses Atmega128.
 <br>
 <br>
-#사용한 보드(Using Board)
+##사용한 보드(Using Board)
 
   재규어(Jaguar) - http://www.probo.co.kr
 <br>
 <br>
-#사용한 툴(Using Tool)
+##사용한 툴(Using Tool)
 
   AVRStudio 4.18
 <br>
