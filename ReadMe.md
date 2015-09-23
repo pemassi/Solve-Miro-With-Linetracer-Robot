@@ -33,9 +33,9 @@ Find a maze algorithm soruce made using the Jaguar Board that uses Atmega128.
 
   <br>
   AVRStudio에서 소스파일을 열 경우 인코딩 문제로 한글이 깨지는 경우가 생길 수 있습니다.<br>
-  윈도우 같은 경우 메모장을 이용하여 모든 소스를 연 후 ANSI 인코딩으로 다시 저장하시면 됩니다.
+  윈도우 같은 경우 메모장을 이용하여 모든 소스를 연 후 ANSI 인코딩으로 다시 저장하시면 됩니다.<br>
   Avr studio can open the cases are often breaking in Hangul is a problem at source file. <br>
- For Windows, such as Open all sources by using Notepad, then moved back in encoding ansi You will have to be saved.
+  For Windows, such as Open all sources by using Notepad, then moved back in encoding ansi You will have to be saved.
   
 #주행 영상(Video)
   https://youtu.be/JdREFaNzGk0
