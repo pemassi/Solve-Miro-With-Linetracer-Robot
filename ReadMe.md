@@ -29,14 +29,14 @@ AVRStudio 4.18
 ### 알려진 문제
 AVRStudio에서 소스파일을 열 경우 인코딩 문제로 한글이 깨지는 경우가 생길 수 있습니다. 윈도우 같은 경우 메모장을 이용하여 모든 소스를 연 후 ANSI 인코딩으로 다시 저장하시면 됩니다.
   
-### 주행 영상(Video)
+### 주행 영상
 https://youtu.be/JdREFaNzGk0
 
 # English
 This project is written for Mission Linetracing of STEAM CUP 2015 in Seoul ([Rule](https://github.com/pemassi/Solve-Miro-With-Linetracer-Robot/blob/master/STEAM%20CUP%202015.pdf)). 
 
 ### Hardware
-- Jaguar - http://www.probo.co.kr / http://www.probo.kr/shop/goods/goods_view.php?goodsno=2198&category=006001
+- Jaguar - http://www.probo.co.kr (KOR) / http://www.probo.kr/shop/goods/goods_view.php?goodsno=2198&category=006001 (KOR)
 - Physical Button Sensor
 - PSD Sensor
 
@@ -56,3 +56,8 @@ The other sources are provided by Probo.
 
 ### Important
 This project is working only on JAGUAR mainboard, so if you use other board such as Arduino, you might need to edit. Also, this project is written only for STEAM CUP 2015 compeition, you might check the rule by checking below link.
+
+[Rule(KOR)](https://github.com/pemassi/Solve-Miro-With-Linetracer-Robot/blob/master/STEAM%20CUP%202015.pdf) 
+
+### Video(It actually works!)
+https://youtu.be/JdREFaNzGk0
